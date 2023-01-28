@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins";
+body{
+  @include indexStandard;
+  main{
+    .slider {
+      margin-top: 2px;
+
+    }
+    .university_info{
+
+      p{
+        font-size: $fontSize;
+        font-weight: bolder;
+      }
+      img{
+        margin-top: $marginTop;
+      }
+
+    }
+
+    .parallax-container{
+      height: 350px;
+
+    }
+    .brief_info{
+      h5{
+        font-weight: bold;
+      }
+      p{
+        font-weight: bolder;
+        font-size: $fontSize;
+      }
+    }
+  }
+  main{
+    flex: 1 0 auto;
+  }
+}

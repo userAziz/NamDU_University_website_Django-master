@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+.each_item{
+  margin-top: $marginTop;
+  a{
+    color: $spanColor;
+    font-size: $fontSize;
+  }
+  img{
+    @include ImgDb;
+  }
+}

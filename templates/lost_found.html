@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{%load static%}
+
+{% block content %}
+
+{% for item in items_from_database %}
+<div class="each_item container">
+
+    <div class="row">
+        <div class="col s4">
+            <img class="responsive-img" src="{{item.image.url}}">
+        </div>
+        <div class="col s8">
+            <h5>{{item.item_name}}</h5>
+            <p><a href="#">{{item.snippet}}</a></p>
+            <p><a href="#" style="color: grey;">{{item.date}}</a></p>
+        </div>
+
+    </div>
+
+</div>
+{%endfor%}
+
+{% endblock content %}
+<!--{% url 'items:details_of_items' slug_path=item_article.slug_path %}-->

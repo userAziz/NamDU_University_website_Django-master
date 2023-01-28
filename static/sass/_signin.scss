@@ -1,0 +1,15 @@
+@import "variables";
+@import "mixins";
+.sign_up{
+  margin-top: $marginTop * 2;
+  margin-bottom: $marginBottom;
+  @include changingFormsColor;
+  @include standardPadding;
+
+  li{
+    display: none;
+  }
+  span{
+    display: none;
+  }
+}

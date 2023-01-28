@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixins";
+
+.majors{
+  margin-top:$marginTop;
+  margin-bottom: $marginBottom * 2 ;
+  font-weight: 700;
+  font-size: $fontSize;
+
+  th{
+    background-color: #1976d2;
+    color: #FFFFFF;
+  }
+  .table_hover:hover{
+    background: #86b6e5;
+
+  }
+
+}

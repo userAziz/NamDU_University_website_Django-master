@@ -1,0 +1,26 @@
+@import "variables";
+@import "mixins";
+
+//all campus codes for here in my website index -> Structure == campus page just named different
+.campus{
+  h2{
+    color: $spanColor;
+  }
+  p{
+    font-size: $fontSize;
+    color: $spanColor;
+  }
+  h2{
+    font-weight: bolder;
+  }
+  img{
+    width: 240px;
+  }
+
+}
+
+.languages{
+  margin-bottom: 20px;
+  padding: 30px;
+
+}

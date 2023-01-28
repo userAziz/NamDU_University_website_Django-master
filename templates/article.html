@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{%load static%}
+<!--page for all articles-->
+{% block content %}
+    {% for article in articles_from_database %}
+		<div class="each_article container hoverable">
+			<div class="row">
+				<div class="col s7">
+					<h5>
+						<a href="{% url 'articles:details_of_articles' slug=article.slug %}">{{article.article_title}}</a>
+					</h5>
+			        <p class="flow-text"><a href="{% url 'articles:details_of_articles' slug=article.slug %}">{{article.snippet}}</a></p>
+				    <p>
+						<a href="{% url 'articles:details_of_articles' slug=article.slug %}" class="date_of_post" style="color:grey;">{{article.date}}</a>
+					</p>
+				</div>
+				<div class="col s5">
+			          <img class="responsive-img" src="{{article.thumb.url}}">
+				</div>
+			</div>
+		</div>
+	{%endfor%}
+
+{% endblock content %}

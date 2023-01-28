@@ -1,0 +1,45 @@
+@mixin eachImgFromDb{
+  height: 400px;
+  width: 600px;
+}
+//mixin for img from database
+@mixin ImgDb{
+  height: 250px;
+  width: 350px;
+  border-radius: 8px;
+}
+//all index standard codes are here
+@mixin indexStandard{
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+//mixins for standard padding login log out
+@mixin standardPadding{
+  padding:80px;
+  width:500px;
+}
+//mixin for displaying forms color blue Materialize
+@mixin changingFormsColor{
+  .input-field input:focus + label {
+    color: #1976d2 !important;
+  }
+  /* label underline focus color */
+  .row .input-field input:focus {
+    border-bottom: 1px solid #1976d2 !important;
+    box-shadow: 0 1px 0 0 #1976d2 !important
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important;
+  }
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #005eed !important;
+    box-shadow: 0 1px 0 0 #005eed !important;
+  }
+
+}

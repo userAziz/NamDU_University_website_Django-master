@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<!--here you can navigate each article-->
+
+	    <div class="article_detail container">
+		     <h4><a href="">{{article.article_title}}</a></h4>
+		     <img class="responsive-img" src="{{article.thumb.url}}">
+			 <p><a href="#">{{article.body}}</a></p>
+		     <p><a href="#">{{article.date}}</a></p>
+		</div>
+
+
+
+{% endblock content %}

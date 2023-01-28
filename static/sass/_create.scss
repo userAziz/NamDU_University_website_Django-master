@@ -1,0 +1,9 @@
+@import "variables";
+@import "mixins";
+
+.create-article{
+  margin-top: $marginTop * 2;
+  margin-bottom: $marginBottom;
+  @include changingFormsColor;
+  @include standardPadding;
+}

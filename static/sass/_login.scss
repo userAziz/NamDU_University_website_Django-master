@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+//login page scss codes are here
+
+.log_in{
+  margin-top: $marginTop * 2;
+  margin-bottom: $marginBottom;
+  @include changingFormsColor;
+  @include standardPadding;
+}

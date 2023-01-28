@@ -1,0 +1,11 @@
+@import "variables";
+@import "mixins";
+//here is the all scss codes for _contact page
+
+.contact{
+  margin-top: $marginTop * 2;
+  margin-bottom:$marginBottom + 50;
+  padding: 40px;
+  @include changingFormsColor;
+
+}

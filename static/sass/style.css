@@ -1,0 +1,172 @@
+.our_team {
+  margin-top: 50px; }
+  .our_team .card {
+    width: 270px; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+  body main .slider {
+    margin-top: 2px; }
+  body main .university_info p {
+    font-size: 18px;
+    font-weight: bolder; }
+  body main .university_info img {
+    margin-top: 50px; }
+  body main .parallax-container {
+    height: 350px; }
+  body main .brief_info h5 {
+    font-weight: bold; }
+  body main .brief_info p {
+    font-weight: bolder;
+    font-size: 18px; }
+  body main {
+    flex: 1 0 auto; }
+
+.majors {
+  margin-top: 50px;
+  margin-bottom: 200px;
+  font-weight: 700;
+  font-size: 18px; }
+  .majors th {
+    background-color: #1976d2;
+    color: #FFFFFF; }
+  .majors .table_hover:hover {
+    background: #86b6e5; }
+
+.article_detail img {
+  height: 400px;
+  width: 600px; }
+.article_detail a {
+  color: #374040; }
+.article_detail p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px; }
+
+.each_article {
+  border-bottom: 1px solid #1976d2;
+  margin-top: 50px;
+  margin-bottom: 100px; }
+  .each_article a {
+    color: #374040; }
+  .each_article img {
+    height: 250px;
+    width: 350px;
+    border-radius: 8px; }
+  .each_article p {
+    font-size: 18px; }
+
+.admissions {
+  margin-top: 50px; }
+  .admissions .collapsible-body {
+    font-size: 18px; }
+  .admissions span {
+    color: #374040; }
+
+.campus h2 {
+  color: #374040; }
+.campus p {
+  font-size: 18px;
+  color: #374040; }
+.campus h2 {
+  font-weight: bolder; }
+.campus img {
+  width: 240px; }
+
+.languages {
+  margin-bottom: 20px;
+  padding: 30px; }
+
+.each_item {
+  margin-top: 50px; }
+  .each_item a {
+    color: #374040;
+    font-size: 18px; }
+  .each_item img {
+    height: 250px;
+    width: 350px;
+    border-radius: 8px; }
+
+.contact {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  padding: 40px;
+  /* label underline focus color */
+  /* label focus color */
+  /* label underline focus color */ }
+  .contact .input-field input:focus + label {
+    color: #1976d2 !important; }
+  .contact .row .input-field input:focus {
+    border-bottom: 1px solid #1976d2 !important;
+    box-shadow: 0 1px 0 0 #1976d2 !important; }
+  .contact .input-field input[type=text]:focus + label, .contact .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important; }
+  .contact .input-field input[type=text]:focus, .contact .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #005eed !important;
+    box-shadow: 0 1px 0 0 #005eed !important; }
+
+.create-article {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* label underline focus color */
+  /* label focus color */
+  /* label underline focus color */
+  padding: 80px;
+  width: 500px; }
+  .create-article .input-field input:focus + label {
+    color: #1976d2 !important; }
+  .create-article .row .input-field input:focus {
+    border-bottom: 1px solid #1976d2 !important;
+    box-shadow: 0 1px 0 0 #1976d2 !important; }
+  .create-article .input-field input[type=text]:focus + label, .create-article .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important; }
+  .create-article .input-field input[type=text]:focus, .create-article .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #005eed !important;
+    box-shadow: 0 1px 0 0 #005eed !important; }
+
+.log_in {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* label underline focus color */
+  /* label focus color */
+  /* label underline focus color */
+  padding: 80px;
+  width: 500px; }
+  .log_in .input-field input:focus + label {
+    color: #1976d2 !important; }
+  .log_in .row .input-field input:focus {
+    border-bottom: 1px solid #1976d2 !important;
+    box-shadow: 0 1px 0 0 #1976d2 !important; }
+  .log_in .input-field input[type=text]:focus + label, .log_in .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important; }
+  .log_in .input-field input[type=text]:focus, .log_in .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #005eed !important;
+    box-shadow: 0 1px 0 0 #005eed !important; }
+
+.sign_up {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  /* label underline focus color */
+  /* label focus color */
+  /* label underline focus color */
+  padding: 80px;
+  width: 500px; }
+  .sign_up .input-field input:focus + label {
+    color: #1976d2 !important; }
+  .sign_up .row .input-field input:focus {
+    border-bottom: 1px solid #1976d2 !important;
+    box-shadow: 0 1px 0 0 #1976d2 !important; }
+  .sign_up .input-field input[type=text]:focus + label, .sign_up .materialize-textarea:focus:not([readonly]) + label {
+    color: #005eed !important; }
+  .sign_up .input-field input[type=text]:focus, .sign_up .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #005eed !important;
+    box-shadow: 0 1px 0 0 #005eed !important; }
+  .sign_up li {
+    display: none; }
+  .sign_up span {
+    display: none; }
+
+/*# sourceMappingURL=style.css.map */

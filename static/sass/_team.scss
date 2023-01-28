@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+.our_team{
+  margin-top:$marginTop;
+
+  .card{
+    width: 270px;
+  }
+}

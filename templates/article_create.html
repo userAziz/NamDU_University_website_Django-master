@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+<!--starting of creating article page.-->
+	<div class="create-article container z-depth-3 hoverable">
+		<form class="site-form input-field" method="POST" action="{% url 'articles:article.create'%}" enctype="multipart/form-data">
+			{{form.as_p}}
+			{%csrf_token%}
+			<input type="submit" class="btn waves-effect waves-light blue darken-2 " value="CREATE" name="">
+		</form>
+	</div>
+
+{% endblock content %}

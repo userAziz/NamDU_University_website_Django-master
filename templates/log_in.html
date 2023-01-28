@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block content %}
+<!--log in page is here you can navigate-->
+
+	<div class="log_in container z-depth-3 hoverable flow-text input-field" >
+		<div class="input-field">
+
+		 <form class="site-form validate " method="POST" >
+			{% csrf_token %}
+			{{form.as_p}}
+
+			{%if request.GET.next%}
+			
+			<input class="" type="hidden" name="next" value="{{request.GET.next}}">
+			{%endif%}
+			<input type="submit" class="btn waves-effect blue darken-2" value="Login" name="">
+
+		 </form>
+		</div>
+
+	</div>
+
+
+
+
+{% endblock content %}

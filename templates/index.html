@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<!--	title of project-->
+	<title>NNU</title>
+
+<!--all links CSS, Materialize, GoogleFonts, GoogleIcons are here-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/f15df23be3.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="{% static 'sass/style.css' %}">
+</head>
+<!--body content start from here-->
+<body>
+<header>
+<!--	header with full codes of navbar-->
+	<div class="navbar-fixed">
+      <nav class="nav-extended blue darken-3 sidenav-trigger">
+        <div class="nav-wrapper">
+<!--      <a href="{% url 'articles:index'%}" class="brand-logo"> <img src="{% static 'images/logo2.png' %}" alt="My image" style="height: 60px; margin-top: 0px;"></a>-->
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class=" hide-on-med-and-down" >
+		    <li class="tab"><a class="active" href="{% url 'articles:index'%}">Home <i class="fas fa-home"></i></a></li>
+		    <li class="tab"><a href="{% url 'articles:list_of_articles'%}">News</a></li>
+		    <li class="tab"><a href="{% url 'articles:admissions'%}">Admissions</a></li>
+		    <li class="tab"><a href="{% url 'articles:majors'%}">Majors </a></li>
+		    <li class="tab"><a href="{% url 'articles:campus'%}">Structure </a></li>
+		    <li class="tab"><a href="{% url 'items:list_of_items'%}">Lost/Found</a></li>
+		    <li class="tab"><a href="{% url 'articles:our_team'%}">Our Team</a></li>
+		    <li class="tab"><a href="{% url 'contact:contact'%}">Contact Us</a></li>
+
+          </ul>
+		  <ul id="nav-mobile" class="right " >
+			{%if user.is_authenticated %}
+			<li><form class="log_out" method="POST" action="{% url 'accounts:log_out'%}">
+				{% csrf_token%}
+				<button type="submit" class="btn waves-effect waves-light blue darken-2">Log OUT </button>
+			</form>
+			</li>
+			{% else %}
+			<div class="nav_index_status">
+				<li><a href="{% url 'accounts:log_in'%}">Login <i class="fas fa-user-tie"></i></a></li>
+				<li><a href="{% url 'accounts:sign_up'%}">Sign up <i class="fas fa-user-plus"></i></a></li>
+				<li><a href="{% url 'articles:article.create'%} ">Create idea <i class="fas fa-file-alt"></i></a></li>
+			</div>
+			{% endif %}
+		  </ul>
+		</div>
+      </nav>
+	</div>
+	<ul class="sidenav" id="mobile-demo">
+		<li class="tab"><a class="active" href="{% url 'articles:index'%}">Home <i class="fas fa-home"></i></a></li>
+		<li class="tab"><a href="{% url 'articles:list_of_articles'%}">News</a></li>
+		<li class="tab"><a href="{% url 'articles:admissions'%}">Admissions</a></li>
+		<li class="tab"><a href="{% url 'articles:majors'%}">Majors </a></li>
+		<li class="tab"><a href="{% url 'articles:campus'%}">Structure </a></li>
+		<li class="tab"><a href="{% url 'items:list_of_items'%}">Lost/Found</a></li>
+		<li class="tab"><a href="{% url 'articles:our_team'%}">Our Team</a></li>
+		<li class="tab"><a href="{% url 'contact:contact'%}">Contact Us</a></li>
+	</ul>
+</header>
+<!--main part of program will start from here-->
+<main>
+   {% block content %}
+<!--	slider of the web in main page-->
+	<div class="slider responsive-img" >
+		<ul class="slides ">
+			<li>
+				<img  src="{% static 'images/banner01.jpg' %}"  alt="My image" > <!-- Slider 1st image -->
+			</li>
+			<li>
+				<img src="{% static 'images/banner03.jpg' %}" alt="My image" >  <!-- Slider 2nd image -->
+			</li>
+			<li>
+				<img src="{% static 'images/banner02.jpg' %}" alt="My image" >  <!-- Slider 3rd image -->
+			</li>
+			<li>
+				<img src="{% static 'images/banner04.jpg' %}" alt="My image" >  <!-- Slider 4th image -->
+			</li>
+		</ul>
+	</div>
+
+<!--	finish slider and start university info part of web starts from here-->
+	<div class="university_info">
+	  <div class="container row ">
+		<div class="col s3 ">
+			<img src="{% static 'images/logo2.png' %}"  class="responsive-img"  alt="My university logo" >
+		</div>
+		<div class="col s9" style="color: dimgrey">
+		<h4>Namangan State University </h4>
+			<div>
+				<p>Namangan State University (NamSU) was established in 1942 as a pedagogical institute. It is in Namangan
+				province which has almost 2.8 mln population with 7900 km2 area locatedin eastern part on Uzbekistan, considered
+				one of the strategically important area. Nowadays NamSU has over 15000 students in bachelor and master degree programs.
+				</p>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+<!--     Slider and brief info finished and now time to parallax effect in my web-->
+	<div class="parallax-container">
+		<div class="parallax"><img src="{% static 'images/new.jpg' %}"  alt="My image" ></div>
+	</div>
+<!--	Parallax effect finish in here-->
+
+<!--	my last 4 icons code start from here-->
+	<div class="row container brief_info" style="color: dimgrey">
+		<div class="col s3">
+			<div class="center promo-example">
+				<a href="{% url 'articles:admissions'%}"><i class="large material-icons blue-text text-darken-3">school</i></a>
+			<h5 class="promo-caption">Admission</h5>
+			<p class="light center">Admission page helps to newcomers and other students to check the last year recordings. </p>
+			</div>
+		</div>
+		<div class="col s3">
+			<div class="center promo-example">
+				<i class="large material-icons blue-text text-darken-3">forum</i>
+				<h5 class="promo-caption">Contact </h5>
+				<p class="light center">Each student can contact with our global students support office(or email and phone). </p>
+			</div>
+		</div>
+		<div class="col s3">
+			<div class="center promo-example">
+				<a href="http://e-library.namdu.uz/"><i class="large material-icons blue-text text-darken-3">get_app</i></a>
+				<h5 class="promo-caption">Download</h5>
+				<p class="light center">Our community support students with extra resources and also last recordings.</p>
+			</div>
+		</div>
+		<div class="col s3">
+			<div class="center promo-example">
+				<a href="{% url 'articles:list_of_articles'%}"><i class="large material-icons blue-text text-darken-3">event_available</i></a>
+				<h5 class="promo-caption">News</h5>
+				<p class="light center">In news page, students can read last news about our university or education system.</p>
+			</div>
+		</div>
+	</div>
+<!--brief info icons code finished in here-->
+	{% endblock content %}
+<!--	end of index codes are here-->
+
+	<div class="fixed-action-btn ">
+
+		<a class="btn-floating btn-large blue darken-3 " >
+			<i class="large material-icons ">mode_edit</i>
+		</a>
+		<ul>
+			<li><a href="https://materializecss.com/floating-action-button.html" class="btn-floating blue darken-3"><i class="material-icons">insert_chart</i></a></li>
+			<li><a class="btn-floating blue darken-3"><i class="material-icons">format_quote</i></a></li>
+			<li><a class="btn-floating blue darken-3"><i class="material-icons">publish</i></a></li>
+			<li><a class="btn-floating blue darken-3"><i class="material-icons">attach_file</i></a></li>
+
+		</ul>
+	</div>
+</main>
+<!--here is the footer-->
+<footer class="page-footer blue darken-3">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">Namangan State University</h5>
+				<p class="grey-text text-lighten-4">Namangan State University is your right choice.</p>
+			</div>
+			<div class="col l2 offset-6 s6">
+			<h5 class="white-text">Follow us</h5>
+			<ul>
+				<li><a class="grey-text text-lighten-3" href="https://www.youtube.com/watch?v=Sq8liiRHr8M"><i class="fab fa-youtube"></i> YouTube</a></li>
+				<li><a class="grey-text text-lighten-3" href="https://www.facebook.com/namangandavlatuniversiteti/"><i class="fab fa-facebook-square"></i> Facebook </a></li>
+				<li><a class="grey-text text-lighten-3" href="https://www.instagram.com/namangan_davlat_universiteti/"><i class="fab fa-instagram"></i> Instagram </a></li>
+				<li><a class="grey-text text-lighten-3" href="http://www.namdu.uz/en"><i class="fab fa-google"></i> Google</a></li>
+			</ul>
+		</div>
+			<div class="col l2 offset-6 s6">
+				<h5 class="white-text">Contact us</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="#"><i class="fas fa-envelope-open-text"></i> Email: info@namdu.uz</a></li>
+					<li><a class="grey-text text-lighten-3" href="#"><i class="fas fa-phone-volume"></i>   Phone: 010-655-65-47</a></li>
+
+					<li><a class="grey-text text-lighten-3" href="#"><i class="fas fa-map-marker-alt"></i> Address: Namangan region, Uzbekistan</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			© 2020 Copyright U.Azizbek. All rights reserved.
+			<a class="grey-text text-lighten-4 right" href="#!">Capstone Design </a>
+		</div>
+	</div>
+</footer>
+
+<!--here is the extra scripts which I used to apply Materialize codes. -->
+<script>
+	$(document).ready(function(){
+		$('.sidenav').sidenav();
+		$('.parallax').parallax();
+		$('.fixed-action-btn').floatingActionButton();
+		$('input#input_text, textarea#textarea2').characterCounter();
+		$('.tooltipped').tooltip();
+		$('.collapsible').collapsible();
+		$('.slider').slider({
+			full_width: true,
+			height : 840,
+			interval: 8000
+		});
+	});
+</script>
+<!--materialize CDN js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>

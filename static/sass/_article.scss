@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins";
+
+//article detail which is news page scss codes
+.article_detail{
+  img{
+    @include eachImgFromDb;
+  }
+  a{
+    color: $spanColor;
+  }
+  p{
+    font-family: $fontFamily;
+    font-size: $fontSize;
+
+  }
+}
+
+//each article which is Index -> news -> click any news and each news scss
+.each_article{
+  border-bottom: $bottomBorder;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+  a{
+    color:$textColor;
+  }
+  img{
+    @include ImgDb;
+  }
+  p{
+    font-size: $fontSize;
+  }
+}

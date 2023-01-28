@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+
+//admission page scss codes
+.admissions{
+  margin-top:$marginTop;
+
+  .collapsible-body{
+    font-size:$fontSize;
+  }
+  span{
+    color:$spanColor;
+  }
+
+}
